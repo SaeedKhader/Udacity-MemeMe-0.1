@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,193 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Udacity_Meme_0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrk-RJ-Qp2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71K-xf-lCC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="71K-xf-lCC" secondAttribute="trailing" id="2ZE-JV-176"/>
+                                    <constraint firstAttribute="bottom" secondItem="71K-xf-lCC" secondAttribute="bottom" id="MxZ-O3-JVg"/>
+                                    <constraint firstItem="71K-xf-lCC" firstAttribute="leading" secondItem="Zrk-RJ-Qp2" secondAttribute="leading" id="aHo-93-54V"/>
+                                    <constraint firstItem="71K-xf-lCC" firstAttribute="top" secondItem="Zrk-RJ-Qp2" secondAttribute="top" id="wPH-HZ-U3z"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08z-uS-ANJ">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dqJ-Qf-Bbm"/>
+                                    <barButtonItem title="Library" image="photo.on.rectangle" catalog="system" id="7ZG-zc-UYY">
+                                        <connections>
+                                            <action selector="pickAnImage" destination="BYZ-38-t0r" id="h2D-wR-nYJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="8Od-DI-q0A"/>
+                                    <barButtonItem image="camera.fill" catalog="system" id="FkI-4e-sMj">
+                                        <connections>
+                                            <action selector="takeAnImage" destination="BYZ-38-t0r" id="e3E-Uj-M9O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="22D-40-o1Q"/>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95w-wQ-QYE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Meme Me" id="C5J-OB-IEl">
+                                        <barButtonItem key="leftBarButtonItem" enabled="NO" image="square.and.arrow.up" catalog="system" id="sMx-ZS-TeP">
+                                            <connections>
+                                                <action selector="share" destination="BYZ-38-t0r" id="bf6-zj-kFO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Cancel" id="pNM-H7-i5K"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E60-8F-FZ9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97B-YA-JGX">
+                                <rect key="frame" x="364" y="103" width="35" height="40"/>
+                                <color key="backgroundColor" red="0.024093590676784515" green="0.031679637730121613" blue="0.032821245491504669" alpha="0.33494755993150682" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="idK-d3-pZ6"/>
+                                    <constraint firstAttribute="height" constant="40" id="uye-YK-FAc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="T">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addText" destination="BYZ-38-t0r" eventType="touchUpInside" id="epE-kv-Lap"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uh-t7-tSC">
+                                <rect key="frame" x="364" y="153" width="35" height="40"/>
+                                <color key="backgroundColor" red="0.024093590679999999" green="0.031679637730000001" blue="0.032821245489999998" alpha="0.33494755990000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Ci2-Zq-EfI"/>
+                                    <constraint firstAttribute="height" constant="40" id="gRO-tF-Oma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="trash" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleDeleteMode" destination="BYZ-38-t0r" eventType="touchUpInside" id="WWt-kq-EoG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9M-Qo-Gxa">
+                                <rect key="frame" x="364" y="203" width="35" height="40"/>
+                                <color key="backgroundColor" red="0.024093590679999999" green="0.031679637730000001" blue="0.032821245489999998" alpha="0.33494755990000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ng4-bL-0xc"/>
+                                    <constraint firstAttribute="width" constant="35" id="SpU-kj-6aM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="crop" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleCropMode" destination="BYZ-38-t0r" eventType="touchUpInside" id="b6B-ZB-6D3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zrk-RJ-Qp2" firstAttribute="top" secondItem="95w-wQ-QYE" secondAttribute="bottom" id="2O0-Wt-bYN"/>
+                            <constraint firstItem="08z-uS-ANJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Qc-J9-XRu"/>
+                            <constraint firstItem="97B-YA-JGX" firstAttribute="top" secondItem="95w-wQ-QYE" secondAttribute="bottom" constant="15" id="EtH-ur-1De"/>
+                            <constraint firstItem="E60-8F-FZ9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GRh-UX-cwl"/>
+                            <constraint firstItem="08z-uS-ANJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HVC-U5-hvb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4uh-t7-tSC" secondAttribute="trailing" constant="15" id="IaI-GE-JXC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="97B-YA-JGX" secondAttribute="trailing" constant="15" id="JD7-7u-atg"/>
+                            <constraint firstItem="Zrk-RJ-Qp2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KBJ-iF-Tq1"/>
+                            <constraint firstItem="95w-wQ-QYE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MMt-Pm-744"/>
+                            <constraint firstItem="95w-wQ-QYE" firstAttribute="top" secondItem="E60-8F-FZ9" secondAttribute="bottom" id="QqY-R9-7Tu"/>
+                            <constraint firstItem="E60-8F-FZ9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T0R-0c-rwu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e9M-Qo-Gxa" secondAttribute="trailing" constant="15" id="VM4-hZ-Pl1"/>
+                            <constraint firstItem="95w-wQ-QYE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="erM-Fa-ztm"/>
+                            <constraint firstItem="08z-uS-ANJ" firstAttribute="top" secondItem="Zrk-RJ-Qp2" secondAttribute="bottom" id="gjB-0x-Adv"/>
+                            <constraint firstAttribute="trailing" secondItem="E60-8F-FZ9" secondAttribute="trailing" id="lt3-uy-njH"/>
+                            <constraint firstItem="4uh-t7-tSC" firstAttribute="top" secondItem="97B-YA-JGX" secondAttribute="bottom" constant="10" id="mPO-Vv-i6k"/>
+                            <constraint firstItem="Zrk-RJ-Qp2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ncl-9C-Luv"/>
+                            <constraint firstItem="e9M-Qo-Gxa" firstAttribute="top" secondItem="4uh-t7-tSC" secondAttribute="bottom" constant="10" id="qdJ-WF-LhZ"/>
+                            <constraint firstItem="08z-uS-ANJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ueg-z9-FaH"/>
+                            <constraint firstItem="95w-wQ-QYE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vsL-JM-uBq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addTextButton" destination="97B-YA-JGX" id="2Es-4V-guV"/>
+                        <outlet property="cameraButton" destination="FkI-4e-sMj" id="7cB-4o-DUL"/>
+                        <outlet property="canvasView" destination="Zrk-RJ-Qp2" id="HSA-vY-S9f"/>
+                        <outlet property="cropButton" destination="e9M-Qo-Gxa" id="HbX-PK-dEf"/>
+                        <outlet property="imageView" destination="71K-xf-lCC" id="FlG-6U-u0V"/>
+                        <outlet property="libraryButton" destination="7ZG-zc-UYY" id="BPU-md-X7C"/>
+                        <outlet property="shareButton" destination="sMx-ZS-TeP" id="BpT-AD-HFA"/>
+                        <outlet property="trashButton" destination="4uh-t7-tSC" id="GfH-iw-xMs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
+        <image name="crop" catalog="system" width="64" height="60"/>
+        <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="trash" catalog="system" width="60" height="64"/>
+    </resources>
 </document>

@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22091D2F23416F2E00F3D615 /* MemeTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22091D2E23416F2E00F3D615 /* MemeTextViewDelegate.swift */; };
 		2218DB33233F9E9C00979EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218DB32233F9E9C00979EE3 /* AppDelegate.swift */; };
 		2218DB35233F9E9C00979EE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218DB34233F9E9C00979EE3 /* SceneDelegate.swift */; };
 		2218DB37233F9E9C00979EE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218DB36233F9E9C00979EE3 /* ViewController.swift */; };
 		2218DB3A233F9E9C00979EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2218DB38233F9E9C00979EE3 /* Main.storyboard */; };
 		2218DB3C233F9E9D00979EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2218DB3B233F9E9D00979EE3 /* Assets.xcassets */; };
 		2218DB3F233F9E9D00979EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2218DB3D233F9E9D00979EE3 /* LaunchScreen.storyboard */; };
+		22D589732348F954008CE9AA /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D589722348F954008CE9AA /* CropView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22091D2E23416F2E00F3D615 /* MemeTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTextViewDelegate.swift; sourceTree = "<group>"; };
 		2218DB2F233F9E9C00979EE3 /* Udacity-Meme 0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Udacity-Meme 0.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2218DB32233F9E9C00979EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2218DB34233F9E9C00979EE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		2218DB3B233F9E9D00979EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2218DB3E233F9E9D00979EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2218DB40233F9E9D00979EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D589722348F954008CE9AA /* CropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				2218DB3B233F9E9D00979EE3 /* Assets.xcassets */,
 				2218DB3D233F9E9D00979EE3 /* LaunchScreen.storyboard */,
 				2218DB40233F9E9D00979EE3 /* Info.plist */,
+				22091D2E23416F2E00F3D615 /* MemeTextViewDelegate.swift */,
+				22D589722348F954008CE9AA /* CropView.swift */,
 			);
 			path = "Udacity-Meme 0.1";
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22091D2F23416F2E00F3D615 /* MemeTextViewDelegate.swift in Sources */,
 				2218DB37233F9E9C00979EE3 /* ViewController.swift in Sources */,
 				2218DB33233F9E9C00979EE3 /* AppDelegate.swift in Sources */,
 				2218DB35233F9E9C00979EE3 /* SceneDelegate.swift in Sources */,
+				22D589732348F954008CE9AA /* CropView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
